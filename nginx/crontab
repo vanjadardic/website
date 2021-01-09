@@ -1,0 +1,12 @@
+* * * * * (             date && sshpass -f ~/sshpass.txt ssh dardic.net '~/vps/update-ip.sh' ) >> ~/update-ip.log 2>&1
+* * * * * ( sleep  5 && date && sshpass -f ~/sshpass.txt ssh dardic.net '~/vps/update-ip.sh' ) >> ~/update-ip.log 2>&1
+* * * * * ( sleep 10 && date && sshpass -f ~/sshpass.txt ssh dardic.net '~/vps/update-ip.sh' ) >> ~/update-ip.log 2>&1
+* * * * * ( sleep 15 && date && sshpass -f ~/sshpass.txt ssh dardic.net '~/vps/update-ip.sh' ) >> ~/update-ip.log 2>&1
+* * * * * ( sleep 20 && date && sshpass -f ~/sshpass.txt ssh dardic.net '~/vps/update-ip.sh' ) >> ~/update-ip.log 2>&1
+* * * * * ( sleep 25 && date && sshpass -f ~/sshpass.txt ssh dardic.net '~/vps/update-ip.sh' ) >> ~/update-ip.log 2>&1
+* * * * * ( sleep 30 && date && sshpass -f ~/sshpass.txt ssh dardic.net '~/vps/update-ip.sh' ) >> ~/update-ip.log 2>&1
+* * * * * ( sleep 35 && date && sshpass -f ~/sshpass.txt ssh dardic.net '~/vps/update-ip.sh' ) >> ~/update-ip.log 2>&1
+* * * * * ( sleep 40 && date && sshpass -f ~/sshpass.txt ssh dardic.net '~/vps/update-ip.sh' ) >> ~/update-ip.log 2>&1
+* * * * * ( sleep 45 && date && sshpass -f ~/sshpass.txt ssh dardic.net '~/vps/update-ip.sh' ) >> ~/update-ip.log 2>&1
+* * * * * ( sleep 50 && date && sshpass -f ~/sshpass.txt ssh dardic.net '~/vps/update-ip.sh' ) >> ~/update-ip.log 2>&1
+* * * * * ( sleep 55 && date && sshpass -f ~/sshpass.txt ssh dardic.net '~/vps/update-ip.sh' ) >> ~/update-ip.log 2>&1
