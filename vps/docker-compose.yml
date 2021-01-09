@@ -1,0 +1,12 @@
+version: "3"
+services:
+  web:
+    build:
+      context: .
+    # use host network so that host dns server can be reached from container
+    network_mode: host
+    ports:
+      - 80:80
+      - 443:443
+    restart: always
+
