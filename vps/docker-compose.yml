@@ -1,6 +1,6 @@
 version: "3"
 services:
-  web:
+  nginx:
     build:
       context: .
     # use host network so that host dns server can be reached from container

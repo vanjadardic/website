@@ -1,3 +1,3 @@
 FROM nginx
 COPY nginx.conf /etc/nginx/nginx.conf
-COPY static /usr/share/nginx/html
+COPY www /var/www/nginx
