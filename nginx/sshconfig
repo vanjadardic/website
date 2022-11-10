@@ -1,4 +1,0 @@
-Host dardic.net
-    User ${user}
-    Port ${port}
-    StrictHostKeyChecking no

@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org" lang="en"
+      xmlns:sec="https://www.thymeleaf.org/thymeleaf-extras-springsecurity5"
+      th:with="title='Homepage'">
+<head th:replace="layout :: head(${title}, ~{}, ~{}, ~{})">
+  <title></title>
+</head>
+<body>
+<th:block th:replace="layout :: header(${title})" />
+
+<div>
+  <p th:text="${'random number: ' + rnd}"></p>
+  <p th:text="${'hello: ' + user}"></p>
+  <p sec:authorize="isAuthenticated()"><a th:href="@{/logout}">Log Out</a></p>
+</div>
+
+<th:block th:replace="layout :: footer" />
+</body>
+</html>

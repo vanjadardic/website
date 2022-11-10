@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org" lang="en"
+      th:with="title='Headers'">
+<head th:replace="layout :: head(${title}, ~{}, ~{}, ~{this :: style})">
+  <title></title>
+  <style>
+    table, th, td {
+      border: 1px solid red;
+    }
+
+    table {
+      border-collapse: collapse;
+    }
+
+    td {
+      font-family: monospace;
+    }
+  </style>
+</head>
+<body>
+<th:block th:replace="layout :: header(${title})" />
+
+<table>
+  <thead>
+  <tr>
+    <th>header</th>
+    <th>value</th>
+  </tr>
+  </thead>
+  <tbody>
+  <tr th:each="hp: ${h}">
+    <td th:text="${hp.key()}"></td>
+    <td th:text="${hp.value()}"></td>
+  </tr>
+  </tbody>
+</table>
+
+<th:block th:replace="layout :: footer" />
+</body>
+</html>
