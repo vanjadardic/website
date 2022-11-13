@@ -1,8 +1,9 @@
 <!DOCTYPE html>
 <html xmlns:th="http://www.thymeleaf.org" lang="en"
-      th:with="title='Headers'">
-<head th:replace="layout :: head(${title}, ~{}, ~{}, ~{this :: style})">
-  <title></title>
+      xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout"
+      layout:decorate="~{layouts/main}">
+<head>
+  <title>Headers</title>
   <style>
     table, th, td {
       border: 1px solid red;
@@ -18,9 +19,7 @@
   </style>
 </head>
 <body>
-<th:block th:replace="layout :: header(${title})" />
-
-<table>
+<table layout:fragment="content">
   <thead>
   <tr>
     <th>header</th>
@@ -34,7 +33,5 @@
   </tr>
   </tbody>
 </table>
-
-<th:block th:replace="layout :: footer" />
 </body>
 </html>

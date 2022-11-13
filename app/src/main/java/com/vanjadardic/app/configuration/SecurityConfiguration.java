@@ -1,4 +1,4 @@
-package com.vanjadardic.app;
+package com.vanjadardic.app.configuration;
 
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
@@ -14,14 +14,16 @@ public class SecurityConfiguration {
 
     @Bean
     public SecurityFilterChain securityFilterChain(HttpSecurity http) throws Exception {
-        http.authorizeHttpRequests(authorize -> authorize
-                .antMatchers("/", "/css/**", "/images/**").permitAll()
-                //.antMatchers("/headers").permitAll()
+        return http.authorizeHttpRequests(authorizeRequests -> authorizeRequests
+                .antMatchers("/", "/static/**").permitAll()
                 .anyRequest().authenticated()
             )
-            .httpBasic(withDefaults())
-            .formLogin(withDefaults());
-        return http.build();
+            .formLogin(withDefaults())
+            .oauth2Login(withDefaults())
+            .logout(logout -> logout
+                .logoutSuccessUrl("/")
+            )
+            .build();
     }
 
     @Bean

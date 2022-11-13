@@ -1,4 +1,4 @@
-package com.vanjadardic.app;
+package com.vanjadardic.app.controller;
 
 import java.util.ArrayList;
 import java.util.Comparator;

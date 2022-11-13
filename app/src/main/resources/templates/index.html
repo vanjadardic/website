@@ -1,19 +1,22 @@
 <!DOCTYPE html>
 <html xmlns:th="http://www.thymeleaf.org" lang="en"
+      xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout"
       xmlns:sec="https://www.thymeleaf.org/thymeleaf-extras-springsecurity5"
-      th:with="title='Homepage'">
-<head th:replace="layout :: head(${title}, ~{}, ~{}, ~{})">
-  <title></title>
+      layout:decorate="~{layouts/main}">
+<head>
+  <title>Homepage</title>
 </head>
 <body>
-<th:block th:replace="layout :: header(${title})" />
-
-<div>
-  <p th:text="${'random number: ' + rnd}"></p>
-  <p th:text="${'hello: ' + user}"></p>
-  <p sec:authorize="isAuthenticated()"><a th:href="@{/logout}">Log Out</a></p>
+<div layout:fragment="content">
+  <p th:text="${'Random number: ' + rnd}"></p>
+  <p sec:authorize="!isAuthenticated()">
+    <span>Hello: Guest</span>
+    <a th:href="@{/login}">Log in</a>
+  </p>
+  <p sec:authorize="isAuthenticated()">
+    <span th:text="${'Hello: ' + user}"></span>
+    <a th:href="@{/logout}">Log Out</a>
+  </p>
 </div>
-
-<th:block th:replace="layout :: footer" />
 </body>
 </html>
